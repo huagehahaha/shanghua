@@ -1,0 +1,134 @@
+{template 'common/header'}
+<div class="we7-page-title">系统信息</div>
+<ul class="we7-page-tab"></ul>
+<div class="main">
+		
+	<table class="table we7-table table-hover site-list">
+		<col widtd="120px" />
+		<col widtd="120px" />
+		<tr>
+			<th colspan="2" class="text-left">用户信息</th>
+		</tr>
+		<tr>
+			<td class="text-left">用户ID</td>
+			<td class="text-left">{$info['uid']}</td>
+		</tr>
+		<tr>
+			<td class="text-left">当前公众号</td>
+			<td class="text-left">{$info['account']}</td>
+		</tr>
+	</table>
+	
+	<table class="table we7-table table-hover site-list">
+		<tr>
+			<th colspan="2" class="text-left">系统信息</th>
+		</tr>
+		<tr>
+			<td class="text-left">尚华程序版本</td>
+			<td class="text-left">ShangHua {php echo IMS_VERSION;} Release {php echo IMS_RELEASE_DATE;} &nbsp; &nbsp;
+				<a href="https://www.aaykk.com" target="_blank" style="color: #428bca;">查看最新版本</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="text-left">产品系列</td>
+			<td class="text-left">
+				{if IMS_FAMILY == 'v'}
+				您的产品是开源版, 没有购买商业授权, 不能用于商业用途
+				{elseif IMS_FAMILY == 's'}
+				您的产品是授权版
+				{elseif IMS_FAMILY == 'x'}
+				您的产品是商业版
+				{else}
+				您的产品是单版
+				{/if}
+			</td>
+		</tr>
+		<tr>
+			<td class="text-left">服务器系统</td>
+			<td class="text-left">{$info['os']}</td>
+		</tr>
+		<tr>
+			<td class="text-left">引擎版本 </td>
+			<td class="text-left">NODE.JS Version {$info['php']}</td>
+		</tr>
+		<tr>
+			<td class="text-left">服务器软件</td>
+			<td class="text-left">{$info['sapi']}</td>
+		</tr>
+		<tr>
+			<td class="text-left">服务器 MySQL 版本</td>
+			<td class="text-left">{$info['mysql']['version']}</td>
+		</tr>
+		<tr>
+			<td class="text-left">上传许可</td>
+			<td class="text-left">{$info['limit']}</td>
+		</tr>
+		<tr>
+			<td class="text-left">当前数据库尺寸</td>
+			<td class="text-left">{$info['mysql']['size']}</td>
+		</tr>
+		<tr>
+			<td class="text-left">当前附件根目录</td>
+			<td class="text-left">{$info['attach']['url']}</td>
+		</tr>
+		<tr>
+			<td class="text-left">当前附件尺寸</td>
+			<td class="text-left">{$info['attach']['size']}</td>
+		</tr>
+	</table>
+
+	{if $_W['isfounder']}
+	<table class="table we7-table table-hover site-list">
+		<col width="150px" />
+		<col width="" />
+		<th colspan="2" class="text-left">尚华开发团队</th>
+		<tr>
+			<td class="text-left">版权所有</td>
+			<td>
+				<a href="https://www.aaykk.com/" target="_blank" style="color: #428bca;"><b>SHH Team</b></a>
+			</td>
+		</tr>
+		<tr>
+			<td class="text-left">Team 成员</td>
+			<td class="text-left">
+				<a href="http://bbs.aaykk.com/?10906" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">华靓（老板爹）</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?83" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">加健（老板娘）</a>; &nbsp;
+				<a class="lightlink2 smallfont" target="_blank" style="color: #428bca;">任洪波</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?19511" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">任洋洋 (Ryan)</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?64869" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">aaaaaa</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?83750" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">bbbbbb</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?90981" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">cccccc</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?111463" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">dddddd</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?38439" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">eeeeee</a>; &nbsp;
+				<a class="lightlink2 smallfont" target="_blank" style="color: #428bca;">ffff</a>; &nbsp;
+				<a class="lightlink2 smallfont" target="_blank" style="color: #428bca;">gggggg</a>; &nbsp;
+				<br /><br />
+				<a href="http://bbs.aaykk.com/?56310" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">hhhhhh (hhhh)</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?52995" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">iiiiii (iiii)</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?11877" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">jjjjjj (jjjj)</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?75780" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">kkkkkk (kkkk)</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?80040" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">llllll (llll)</a>; &nbsp;
+				<a href="http://bbs.aaykk.com/?98655" class="lightlink2 smallfont" target="_blank" style="color: #428bca;">mmmmmm (mmmm)</a>; &nbsp;
+				<a class="lightlink2 smallfont" target="_blank" style="color: #428bca;">oooo (oooo)</a>; &nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td class="text-left">官方交流群</td>
+			<td>
+				<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=751aa2f28317557b6f0874692c927974611b0c193c9b36ab17b64f9cbd43e5ad" style="color: #428bca;">21191693</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="text-left">相关链接</td>
+			<td>
+				<a href="https://www.aaykk.com/" class="lightlink2" target="_blank" style="color: #428bca;">公司网站</a>&nbsp;&nbsp;
+				<a href="http://www.aaykk.com/purchase.html" class="lightlink2" target="_blank" style="color: #428bca;">购买授权</a>&nbsp;&nbsp;
+				<a href="http://s.aaykk.com/" class="lightlink2" target="_blank" style="color: #428bca;">更多模块</a>&nbsp;&nbsp;
+				<a href="http://www.zhsc0751.top/donknap/aaykk/136556" class="lightlink2" target="_blank" style="color: #428bca;">文档</a>&nbsp;&nbsp;
+				<a href="http://bbs.aaykk.com/" class="lightlink2" target="_blank" style="color: #428bca;">讨论区</a>
+			</td>
+		</tr>
+	</table>
+	{/if}
+</div>
+{template 'common/footer'}
